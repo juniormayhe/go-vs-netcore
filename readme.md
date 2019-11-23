@@ -13,7 +13,7 @@ docker pull mysql
 docker run -p 3306:3306 --name some-mysql -e MYSQL_ROOT_PASSWORD=12345 -d mysql:latest
 ```
 
-then create a demo database in mysql
+then create a demo database in mysql. Go project will create table automatically.
 
 ### Download go dependencies for gin
 
@@ -116,8 +116,6 @@ Statistics        Avg      Stdev        Max
     others - 0
   Throughput:   568.82KB/s
 ```
-
-  
 
 ## TL;DR
 
