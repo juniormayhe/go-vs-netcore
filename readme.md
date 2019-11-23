@@ -2,23 +2,38 @@
 Junior@DESKTOP-0DL2BTS MINGW64 ~/go/src
 
 ## Setup your enviroment
+
+Prepare your mysql data
 ```
 docker pull mysql
 docker run -p 3306:3306 --name some-mysql -e MYSQL_ROOT_PASSWORD=12345 -d mysql:latest
-create a demo database in mysql
+create a demo database in mysq
+```
 
-##
+Download go dependencies for gin
 ```
 cd ~/go/src/go
 go get -u github.com/gin-gonic/gin
 go get gopkg.in/gin-gonic/gin.v1
 go get github.com/go-sql-driver/mysql
 go get -u github.com/jinzhu/gorm
+```
+
+Get benchmark tool
+```
 go get -u github.com/codesenberg/bombardier
+```
+
+## Running go
+
+Run REST API in go before running bombardier for benchmarking go
+```
 go run main.go
 ```
 
-## Golang 1.12.7
+## Benchmarking
+
+### Golang 1.12.7
 ```
 $ bombardier -c 125 -n 500000 http://localhost:8080/v1/api/todos
 Bombarding http://localhost:8080/v1/api/todos with 500000 request(s) using 125 connection(s)
@@ -33,7 +48,7 @@ Statistics        Avg      Stdev        Max
   Throughput:   505.79KB/s
 ```
 
-## Golang 1.13.4
+### Golang 1.13.4
 ```
 Junior@DESKTOP-0DL2BTS MINGW64 ~/go/src
 $ bombardier -c 125 -n 500000 http://localhost:8080/v1/api/todos
@@ -49,7 +64,9 @@ Statistics        Avg      Stdev        Max
   Throughput:   517.46KB/s
 ```
 
-## Netcore 2.1
+### Netcore 2.1
+
+Use Visual Studio or dotnet run to execute netcore REST api.
 ```
 Junior@DESKTOP-0DL2BTS MINGW64 ~/go/src
 $ bombardier -c 125 -n 500000 http://localhost:5001/todo
@@ -65,7 +82,7 @@ Statistics        Avg      Stdev        Max
   Throughput:   457.84KB/s
 ```
 
-## Netcore 2.2
+### Netcore 2.2
 ```
 Junior@DESKTOP-0DL2BTS MINGW64 ~/go/src
 $ bombardier -c 125 -n 500000 http://localhost:5003/todo
@@ -81,7 +98,7 @@ Statistics        Avg      Stdev        Max
   Throughput:   573.86KB/s
 ```
 
-## Netcore 3.0
+### Netcore 3.0
 ```
 $ bombardier -c 125 -n 500000 http://localhost:5000/todo
 Bombarding http://localhost:5000/todo with 500000 request(s) using 125 connection(s)
