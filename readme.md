@@ -142,8 +142,8 @@ Best HTTP throughput, higher is better
 
 | Language     |  KB/s  |
 |              |  ---:  |
-| netcore 2.1  | 457.84 |
-| go 1.12.7    | 505.79 |
-| go 1.13.4    | 517.46 |
-| netcore 3.0  | 568.82 |
 | netcore 2.2  | 573.86 |
+| netcore 3.0  | 568.82 |
+| go 1.13.4    | 517.46 |
+| go 1.12.7    | 505.79 |
+| netcore 2.1  | 457.84 |
