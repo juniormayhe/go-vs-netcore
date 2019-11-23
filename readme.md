@@ -115,3 +115,35 @@ Statistics        Avg      Stdev        Max
     others - 0
   Throughput:   568.82KB/s
 ```
+
+## TL;DR
+
+Best HTTP requests per second, higher is better
+
+| Language     | Requests/sec |
+|              |        ---:  |
+| go 1.13.4    | 2637.04 |
+| go 1.12.7    | 2577.86 |
+| netcore 2.2  | 1708.14 |
+| netcore 3.0  | 1691.85 |
+| netcore 2.1  | 1362.85 |
+
+Best HTTP latency, lower is better
+
+| Language     |  ms    |
+|              |  ---:  |
+| go 1.13.4    | 47.41 |
+| go 1.12.7    | 48.50 |
+| netcore 2.2  | 73.16 |
+| netcore 3.0  | 73.84 |
+| netcore 2.1  | 91.70 |
+
+Best HTTP throughput, higher is better
+
+| Language     |  KB/s  |
+|              |  ---:  |
+| netcore 2.1  | 457.84 |
+| go 1.12.7    | 505.79 |
+| go 1.13.4    | 517.46 |
+| netcore 3.0  | 568.82 |
+| netcore 2.2  | 573.86 |
