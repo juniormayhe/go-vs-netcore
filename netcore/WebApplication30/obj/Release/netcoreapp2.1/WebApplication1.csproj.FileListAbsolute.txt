@@ -1,0 +1,3 @@
+C:\Users\Junior\source\repos\WebApplication1\WebApplication1\obj\Release\netcoreapp2.1\WebApplication1.csprojAssemblyReference.cache
+C:\Users\Junior\source\repos\WebApplication1\WebApplication1\obj\Release\netcoreapp2.1\WebApplication1.AssemblyInfoInputs.cache
+C:\Users\Junior\source\repos\WebApplication1\WebApplication1\obj\Release\netcoreapp2.1\WebApplication1.AssemblyInfo.cs

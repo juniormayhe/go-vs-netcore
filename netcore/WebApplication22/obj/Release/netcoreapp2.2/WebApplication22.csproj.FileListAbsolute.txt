@@ -1,0 +1,15 @@
+C:\Users\Junior\go\src\netcore\WebApplication22\bin\Release\netcoreapp2.2\appsettings.Development.json
+C:\Users\Junior\go\src\netcore\WebApplication22\bin\Release\netcoreapp2.2\appsettings.json
+C:\Users\Junior\go\src\netcore\WebApplication22\bin\Release\netcoreapp2.2\Properties\launchSettings.json
+C:\Users\Junior\go\src\netcore\WebApplication22\bin\Release\netcoreapp2.2\WebApplication22.deps.json
+C:\Users\Junior\go\src\netcore\WebApplication22\bin\Release\netcoreapp2.2\WebApplication22.runtimeconfig.json
+C:\Users\Junior\go\src\netcore\WebApplication22\bin\Release\netcoreapp2.2\WebApplication22.runtimeconfig.dev.json
+C:\Users\Junior\go\src\netcore\WebApplication22\bin\Release\netcoreapp2.2\WebApplication22.dll
+C:\Users\Junior\go\src\netcore\WebApplication22\bin\Release\netcoreapp2.2\WebApplication22.pdb
+C:\Users\Junior\go\src\netcore\WebApplication22\obj\Release\netcoreapp2.2\WebApplication22.RazorAssemblyInfo.cache
+C:\Users\Junior\go\src\netcore\WebApplication22\obj\Release\netcoreapp2.2\WebApplication22.RazorAssemblyInfo.cs
+C:\Users\Junior\go\src\netcore\WebApplication22\obj\Release\netcoreapp2.2\WebApplication22.AssemblyInfoInputs.cache
+C:\Users\Junior\go\src\netcore\WebApplication22\obj\Release\netcoreapp2.2\WebApplication22.AssemblyInfo.cs
+C:\Users\Junior\go\src\netcore\WebApplication22\obj\Release\netcoreapp2.2\WebApplication22.RazorTargetAssemblyInfo.cache
+C:\Users\Junior\go\src\netcore\WebApplication22\obj\Release\netcoreapp2.2\WebApplication22.dll
+C:\Users\Junior\go\src\netcore\WebApplication22\obj\Release\netcoreapp2.2\WebApplication22.pdb
