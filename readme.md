@@ -124,7 +124,7 @@ Statistics        Avg      Stdev        Max
 Best HTTP requests per second, higher is better
 
 | Language | Requests/sec |
-|  --- | ---  |
+|  --- | ---:  |
 | go 1.13.4 | 2637.04 :arrow_up_small:|
 | go 1.12.7 | 2577.86 |
 | netcore 2.2 | 1708.14 |
@@ -134,7 +134,7 @@ Best HTTP requests per second, higher is better
 Best HTTP latency, lower is better
 
 | Language | ms |
-| --- | --- |
+| --- | ---: |
 | go 1.13.4 | 47.41 :arrow_up_small:|
 | go 1.12.7 | 48.50 |
 | netcore 2.2 | 73.16 |
@@ -144,7 +144,7 @@ Best HTTP latency, lower is better
 Best HTTP throughput, higher is better
   
 | Language  | KB/s |
-|--|--|
+|--|---:|
 | netcore 2.2 | 573.86 :arrow_up_small: |
 | netcore 3.0 | 568.82 |
 | go 1.13.4 | 517.46 |
