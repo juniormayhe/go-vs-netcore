@@ -1,5 +1,8 @@
+# Go vs Netcore REST API performance comparison
 
-Junior@DESKTOP-0DL2BTS MINGW64 ~/go/src
+Here a quick performance test using bombardier to evaluate requests per second, latency and throughput of go (with gin) and netcore.
+
+![go vs netcore](//media.giphy.com/media/wIV2gwOkpZeBG/giphy.gif)
 
 ## Setup your enviroment
 
