@@ -1,19 +1,22 @@
+
 # Go vs Netcore REST API performance comparison
 
-Here a quick performance test using bombardier to evaluate requests per second, latency and throughput of go (with gin) and netcore.
+Here a quick performance test using bombardier to evaluate requests per second, latency and throughput of go (with gin) and netcore.  
 
 ![](https://media.giphy.com/media/wIV2gwOkpZeBG/giphy.gif)
 
 ## Setup your enviroment
 
-Prepare your mysql data
+### Prepare your mysql data
 ```
 docker pull mysql
 docker run -p 3306:3306 --name some-mysql -e MYSQL_ROOT_PASSWORD=12345 -d mysql:latest
-create a demo database in mysq
 ```
 
-Download go dependencies for gin
+then create a demo database in mysql
+
+### Download go dependencies for gin
+
 ```
 cd ~/go/src/go
 go get -u github.com/gin-gonic/gin
@@ -22,7 +25,7 @@ go get github.com/go-sql-driver/mysql
 go get -u github.com/jinzhu/gorm
 ```
 
-Get benchmark tool
+### Get benchmark tool
 ```
 go get -u github.com/codesenberg/bombardier
 ```
@@ -53,7 +56,6 @@ Statistics        Avg      Stdev        Max
 
 ### Golang 1.13.4
 ```
-Junior@DESKTOP-0DL2BTS MINGW64 ~/go/src
 $ bombardier -c 125 -n 500000 http://localhost:8080/v1/api/todos
 Bombarding http://localhost:8080/v1/api/todos with 500000 request(s) using 125 connection(s)
  500000 / 500000  100.00% 2634/s 3m9ss
@@ -70,8 +72,8 @@ Statistics        Avg      Stdev        Max
 ### Netcore 2.1
 
 Use Visual Studio or dotnet run to execute netcore REST api.
+
 ```
-Junior@DESKTOP-0DL2BTS MINGW64 ~/go/src
 $ bombardier -c 125 -n 500000 http://localhost:5001/todo
 Bombarding http://localhost:5001/todo with 500000 request(s) using 125 connectio   n(s)
  500000 / 500000  100.00% 1362/s 6m7ss
@@ -87,7 +89,6 @@ Statistics        Avg      Stdev        Max
 
 ### Netcore 2.2
 ```
-Junior@DESKTOP-0DL2BTS MINGW64 ~/go/src
 $ bombardier -c 125 -n 500000 http://localhost:5003/todo
 Bombarding http://localhost:5003/todo with 500000 request(s) using 125 connection(s)
  500000 / 500000  100.00% 1707/s 4m52s
@@ -116,37 +117,36 @@ Statistics        Avg      Stdev        Max
   Throughput:   568.82KB/s
 ```
 
+  
+
 ## TL;DR
 
 Best HTTP requests per second, higher is better
-```
-| Language     | Requests/sec |
-|              |        ---:  |
-| go 1.13.4    | 2637.04 |
-| go 1.12.7    | 2577.86 |
-| netcore 2.2  | 1708.14 |
-| netcore 3.0  | 1691.85 |
-| netcore 2.1  | 1362.85 |
-```
+
+| Language | Requests/sec |
+|  --- | ---  |
+| go 1.13.4 | 2637.04 |
+| go 1.12.7 | 2577.86 |
+| netcore 2.2 | 1708.14 |
+| netcore 3.0 | 1691.85 |
+| netcore 2.1 | 1362.85 |
 
 Best HTTP latency, lower is better
-```
-| Language     |  ms    |
-|              |  ---:  |
-| go 1.13.4    | 47.41 |
-| go 1.12.7    | 48.50 |
-| netcore 2.2  | 73.16 |
-| netcore 3.0  | 73.84 |
-| netcore 2.1  | 91.70 |
-```
+
+| Language | ms |
+| --- | --- |
+| go 1.13.4 | 47.41 |
+| go 1.12.7 | 48.50 |
+| netcore 2.2 | 73.16 |
+| netcore 3.0 | 73.84 |
+| netcore 2.1 | 91.70 |
 
 Best HTTP throughput, higher is better
-```
-| Language     |  KB/s  |
-|              |  ---:  |
-| netcore 2.2  | 573.86 |
-| netcore 3.0  | 568.82 |
-| go 1.13.4    | 517.46 |
-| go 1.12.7    | 505.79 |
-| netcore 2.1  | 457.84 |
-```
+  
+| Language  | KB/s |
+|--|--|
+| netcore 2.2 | 573.86 |
+| netcore 3.0 | 568.82 |
+| go 1.13.4 | 517.46 |
+| go 1.12.7 | 505.79 |
+| netcore 2.1 | 457.84 |
